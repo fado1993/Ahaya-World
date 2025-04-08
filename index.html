@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahaya World</title>
+  <audio id="bgMusic" autoplay loop style="display: none;">
+    <source src="attached_assets/WhatsApp Audio 2025-04-08 at 11.48.26.mp4" type="audio/mp4">
+  </audio>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      background: url('backgroundfantasy.jpg') no-repeat center center fixed;
+      background-size: cover;
+      animation: zoomBackground 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes zoomBackground {
+      0% {
+        background-size: 100% 100%;
+      }
+      100% {
+        background-size: 120% 120%;
+      }
+      color: #2c2c2c;
+    }
+    header {
+      color: white;
+      text-align: center;
+    }
+    .world-description {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .character-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+    .character-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      padding: 15px;
+      border-radius: 8px;
+      width: 200px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .character-card:hover {
+      transform: scale(1.05);
+    }
+    .character-profile {
+      display: none;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(255, 251, 230, 0.8);
+      backdrop-filter: blur(12px);
+      border: 2px solid #ccc5b9;
+      border-radius: 10px;
+    }
+    .back-button {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .back-button button {
+      padding: 8px 16px;
+      font-size: 14px;
+      background-color: #3a2f25;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .back-button button:hover {
+      background-color: #5b4535;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌍 Ahaya World</h1>
+    <p>Dunia yang dulunya seimbang, kini terguncang oleh kekuatan dari tiga dimensi: Terang, Kegelapan, dan Kehampaan.</p>
+  </header>
+
+  <div class="world-description">
+    <p>Ahaya World adalah dunia fantasi yang terbagi atas tiga dimensi utama: Terang, Kegelapan, dan Kehampaan. Masing-masing dimensi bukan hanya sekadar ruang, melainkan sumber kekuatan primordial yang membentuk kehidupan dan konflik di dunia ini. Dimensi Terang menaungi kebijaksanaan, keteraturan, dan harapan; Kegelapan mewakili ambisi, rahasia, dan kekuatan tersembunyi; sedangkan Kehampaan adalah kekacauan, kehancuran, dan potensi tanpa bentuk. 
+    <br><br>
+    Tiga ras utama — Lumian, Veyra, dan Arkanian — telah hidup dalam ketegangan yang diwariskan turun-temurun sejak runtuhnya "Perjanjian Tiga Pilar", sebuah pakta kuno yang pernah menjaga keseimbangan dimensi. Lumian lahir dari cahaya purba, Veyra hidup di antara bayang dan mimpi, sedangkan Arkanian adalah penjaga batas dimensi, sering dianggap sebagai penafsir takdir.
+    <br><br>
+    Namun, seiring waktu, kekuatan dari tiap dimensi mulai mencemari satu sama lain, menciptakan fenomena baru, makhluk anomali, dan kehancuran lokal. Para tokoh utama muncul dalam masa kekacauan ini — masing-masing membawa tujuan, beban, dan pengaruh mereka sendiri terhadap nasib Ahaya World. Dunia ini tidak hanya menghadapi perpecahan fisik dan spiritual, tetapi juga ancaman dari luar batas realitas yang dikenal.</p>
+  </div>
+
+  <div class="character-grid">
+    <div class="character-card" onclick="showProfile('nexsu')">Nexsu</div>
+    <div class="character-card" onclick="showProfile('shion')">Shion</div>
+    <div class="character-card" onclick="showProfile('fuyi')">Fuyi</div>
+    <div class="character-card" onclick="showProfile('shora')">Shora</div>
+    <div class="character-card" onclick="showProfile('raisa')">Raisa</div>
+    <div class="character-card" onclick="showProfile('shin')">Shin</div>
+    <div class="character-card" onclick="showProfile('rain')">Rain</div>
+  </div>
+
+  <div class="character-profile" id="nexsu">
+    <h2>Nexsu — <em>Void Herald</em></h2>
+    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+    <p><strong>Ras:</strong> Tidak diketahui (dikenal sebagai "Voidling")</p>
+    <p><strong>Kelas:</strong> Void Caster</p>
+    <p>Nexsu adalah makhluk yang terlahir dari retakan antara tiga dimensi, entitas yang tidak memiliki tempat pasti di dunia. Dia menyerap fragmen kekuatan dari Terang, Gelap, dan Kehampaan, menjadikannya entitas yang tidak dapat diklasifikasikan oleh sistem sihir manapun. Keberadaannya dipandang sebagai ancaman oleh banyak pihak, namun juga harapan oleh segelintir yang percaya bahwa keseimbangan bisa dicapai melalui chaos.</p>
+    <p><strong>Keterkaitan:</strong> Menyelamatkan Shin dari ledakan anomali, menjalin komunikasi gelap dengan Shora, dan menjadi objek pengamatan Fuyi.</p>
+  </div>
+
+  <div class="character-profile" id="shion">
+    <h2>Shion — <em>Shadowclad</em></h2>
+    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+    <p><strong>Ras:</strong> Veyra</p>
+    <p><strong>Kelas:</strong> Phantom Ranger</p>
+    <p>Shion adalah pengintai elit dari bangsa bayang-bayang. Ia bergerak dalam kesunyian, membunuh tanpa suara, dan hidup dengan prinsip bahwa cahaya adalah kebohongan yang memudarkan kebenaran. Misi-misinya selalu penuh rahasia, dan dia memiliki akses ke jaringan informasi lintas dimensi.</p>
+    <p><strong>Keterkaitan:</strong> Pernah menjadi rival Rain dalam beberapa konflik tak langsung, juga sempat menjadi target penyelidikan Raisa.</p>
+  </div>
+
+  <div class="character-profile" id="fuyi">
+    <h2>Fuyi — <em>Starweaver</em></h2>
+    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+    <p><strong>Ras:</strong> Lumian</p>
+    <p><strong>Kelas:</strong> Astral Sage</p>
+    <p>Fuyi adalah penjaga observatorium kuno yang memetakan gerakan bintang dan dimensi. Ia mampu menenun benang takdir menggunakan cahaya dari konstelasi, dan melihat kemungkinan masa depan. Tenang, teratur, dan jarang berinteraksi kecuali diperlukan.</p>
+    <p><strong>Keterkaitan:</strong> Mengamati Nexsu dan berusaha mengurai pengaruhnya terhadap pola bintang. Memberi informasi kepada Raisa tentang gerakan anomali waktu.</p>
+  </div>
+
+  <div class="character-profile" id="shora">
+    <h2>Shora — <em>Architect of Echoes</em></h2>
+    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+    <p><strong>Ras:</strong> ??? (dikenal sebagai "Creator")</p>
+    <p><strong>Kelas:</strong> Reality Weaver</p>
+    <p>Shora adalah entitas misterius yang diyakini sebagai arsitek awal Ahaya World. Ia tidak terikat pada waktu linear dan bisa mengakses "lapisan gema" realitas. Muncul dan menghilang sesuka hati, meninggalkan artefak yang memengaruhi ruang dan waktu.</p>
+    <p><strong>Keterkaitan:</strong> Kadang membimbing Nexsu, namun tak pernah menyatakan niat sebenarnya. Raisa mencurigainya sebagai pemicu awal keretakan dimensi.</p>
+  </div>
+
+  <div class="character-profile" id="raisa">
+    <h2>Raisa — <em>Lunar Seer</em></h2>
+    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+    <p><strong>Ras:</strong> Lumian</p>
+    <p><strong>Kelas:</strong> Moon Priestess</p>
+    <p>Raisa adalah penjaga kuil bulan, tempat di mana sihir lunar dipelajari dan dipusatkan. Ia dikenal sebagai pemurni energi dan penyeimbang dalam konflik sihir antar ras. Memiliki kemampuan menyembuhkan dan mengisolasi energi dimensi.</p>
+    <p><strong>Keterkaitan:</strong> Mengawasi aktivitas Shin karena energi terkorupsi-nya, bekerja sama dengan Fuyi dalam memetakan anomali langit.</p>
+  </div>
+
+  <div class="character-profile" id="shin">
+    <h2>Shin — <em>Lightbane</em></h2>
+    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+    <p><strong>Ras:</strong> Arkanian</p>
+    <p><strong>Kelas:</strong> Anti-Paladin</p>
+    <p>Shin dulunya adalah paladin yang ditugaskan menjaga Gerbang Terang, namun setelah insiden ledakan dimensi, ia kehilangan kepercayaan pada cahaya itu sendiri. Kini, ia menggunakan kekuatan suci yang telah tercemar untuk melindungi yang tertindas, namun dengan caranya sendiri yang brutal. Julukan "Lightbane" diberikan oleh mantan ordo-nya karena ia dianggap menghianati terang.</p>
+    <p><strong>Keterkaitan:</strong> Shin diselamatkan oleh Nexsu dalam ledakan anomali dan sejak itu diam-diam membantunya di balik layar. Ia juga menjaga jarak dari Raisa karena takut energinya yang korup mengganggu kestabilan lunar magic.</p>
+  </div>
+
+  <div class="character-profile" id="rain">
+    <h2>Rain — <em>Stormrend</em></h2>
+    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+    <p><strong>Ras:</strong> Veyra</p>
+    <p><strong>Kelas:</strong> Tempest Blade</p>
+    <p>Rain adalah petarung bebas yang menguasai seni pedang berbasis badai. Ia dilatih oleh suku pengembara gurun kilat, dan tubuhnya telah menyatu dengan arus atmosferik. Rain sering muncul di garis depan konflik antardimensi, bukan untuk menyelamatkan atau menghancurkan, tapi demi mengikuti aliran angin takdir. Ia dikenal sebagai pemicu kekacauan namun juga penyelamat tak terduga.</p>
+    <p><strong>Keterkaitan:</strong> Rain memiliki sejarah pertempuran panjang dengan Shion, namun keduanya saling menghormati sebagai pejuang sejati. Ia juga memiliki rasa ingin tahu tinggi terhadap kekuatan bintang yang dibawa Fuyi.</p>
+  </div>
+
+  <script>
+    function showProfile(id) {
+      document.querySelectorAll('.character-profile').forEach(el => el.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      window.scrollTo({ top: document.getElementById(id).offsetTop - 20, behavior: 'smooth' });
+    }
+
+    function hideProfiles() {
+      document.querySelectorAll('.character-profile').forEach(el => el.style.display = 'none');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
